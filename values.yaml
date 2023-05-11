@@ -1,0 +1,22 @@
+global:
+  acls:
+    manageSystemACLs: true
+  datacenter: dc1
+  enabled: true
+  name: consul
+  tls:
+    enabled: true
+  metrics:
+    enabled: true
+    defaultEnabled: true
+  image: 'im2nguyenhashi/consul:demo'
+  imageK8S: 'im2nguyenhashi/consul-k8s-control-plane-dev:demo'
+server:
+  enabled: true
+  replicas: 1
+ui:
+  enabled: true
+  service:
+    type: NodePort
+connectInject:
+  enabled: true
